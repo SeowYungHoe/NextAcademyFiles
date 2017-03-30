@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1iH-Ed-4E5">
+                                <rect key="frame" x="0.0" y="203" width="375" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="201" id="czh-SL-OZW" customClass="MenuCell" customModule="FoodMenu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="201"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="czh-SL-OZW" id="uZR-Xl-aZx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0zR-qm-Erc">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="200"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-ak-vQm">
+                                                            <rect key="frame" x="0.0" y="0.0" width="119.5" height="200"/>
+                                                            <state key="normal" title="Button" image="roti_canai"/>
+                                                            <connections>
+                                                                <action selector="foodSelected:" destination="czh-SL-OZW" eventType="touchUpInside" id="c6L-3J-6Wh"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-pR-DVl">
+                                                            <rect key="frame" x="119.5" y="0.0" width="120" height="200"/>
+                                                            <state key="normal" title="Button" image="satay"/>
+                                                            <connections>
+                                                                <action selector="foodSelected:" destination="czh-SL-OZW" eventType="touchUpInside" id="Ia3-ZY-xys"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YR-Af-922">
+                                                            <rect key="frame" x="239.5" y="0.0" width="119.5" height="200"/>
+                                                            <state key="normal" title="Button" image="nasi_lemak"/>
+                                                            <connections>
+                                                                <action selector="foodSelected:" destination="czh-SL-OZW" eventType="touchUpInside" id="d6C-Z3-tnm"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="Fwr-ca-Vw4"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="0zR-qm-Erc" secondAttribute="trailing" constant="8" id="CeN-RS-we1"/>
+                                                <constraint firstAttribute="bottom" secondItem="0zR-qm-Erc" secondAttribute="bottom" constant="8" id="VeL-Gv-icp"/>
+                                                <constraint firstItem="0zR-qm-Erc" firstAttribute="top" secondItem="uZR-Xl-aZx" secondAttribute="top" constant="8" id="XbY-uI-K8u"/>
+                                                <constraint firstItem="0zR-qm-Erc" firstAttribute="leading" secondItem="uZR-Xl-aZx" secondAttribute="leading" constant="8" id="ZL5-PD-320"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" rowHeight="123" id="NY8-Bq-lxW" customClass="MenuCell" customModule="FoodMenu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="229" width="375" height="123"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="NY8-Bq-lxW" id="caM-Ku-XAf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kwT-6a-URF">
+                                                    <rect key="frame" x="0.0" y="-47" width="375" height="200"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVL-hT-PNf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="200"/>
+                                                            <state key="normal" title="Button" image="limau_ais"/>
+                                                            <connections>
+                                                                <action selector="drinkSelected:" destination="NY8-Bq-lxW" eventType="touchUpInside" id="qAT-CU-KOt"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-tY-srP">
+                                                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="200"/>
+                                                            <state key="normal" title="Button" image="teh_tarik"/>
+                                                            <connections>
+                                                                <action selector="drinkSelected:" destination="NY8-Bq-lxW" eventType="touchUpInside" id="LUt-J6-I88"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="Eg3-eD-J58"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kwT-6a-URF" firstAttribute="leading" secondItem="caM-Ku-XAf" secondAttribute="leading" id="Ms9-ae-Tnb"/>
+                                                <constraint firstAttribute="trailing" secondItem="kwT-6a-URF" secondAttribute="trailing" id="R8O-xs-rxK"/>
+                                                <constraint firstAttribute="bottom" secondItem="kwT-6a-URF" secondAttribute="bottom" id="fuc-xz-fvQ"/>
+                                                <constraint firstItem="kwT-6a-URF" firstAttribute="top" secondItem="caM-Ku-XAf" secondAttribute="top" id="rzK-YA-2u7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="x8c-GY-aTz">
+                                <rect key="frame" x="20" y="36.5" width="335" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aw4-ap-HTe">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-DY-aR0">
+                                        <rect key="frame" x="167.5" y="0.0" width="167.5" height="100"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="czK-OQ-3k9"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndk-sE-4NY">
+                                <rect key="frame" x="166" y="20" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1iH-Ed-4E5" firstAttribute="top" secondItem="x8c-GY-aTz" secondAttribute="bottom" constant="10" id="6kR-tQ-6fs"/>
+                            <constraint firstAttribute="trailing" secondItem="1iH-Ed-4E5" secondAttribute="trailing" id="MUA-r4-raJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1iH-Ed-4E5" secondAttribute="bottom" id="QL8-R9-HVJ"/>
+                            <constraint firstItem="Ndk-sE-4NY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQ5-Ga-Upt"/>
+                            <constraint firstItem="Ndk-sE-4NY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="8" id="Yc7-rv-22o"/>
+                            <constraint firstItem="1iH-Ed-4E5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g17-Qo-dz2"/>
+                            <constraint firstItem="x8c-GY-aTz" firstAttribute="top" secondItem="Ndk-sE-4NY" secondAttribute="bottom" constant="8" id="m7p-WY-Czq"/>
+                            <constraint firstItem="x8c-GY-aTz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="nhb-dh-Ij5"/>
+                            <constraint firstAttribute="trailing" secondItem="x8c-GY-aTz" secondAttribute="trailing" constant="20" id="ts7-xC-bOk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drinkImageView" destination="BZe-DY-aR0" id="nCU-xx-czu"/>
+                        <outlet property="foodImageView" destination="Aw4-ap-HTe" id="O0S-BU-NLd"/>
+                        <outlet property="tableView" destination="1iH-Ed-4E5" id="Ovh-ba-ksV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="limau_ais" width="225" height="225"/>
+        <image name="nasi_lemak" width="259" height="194"/>
+        <image name="roti_canai" width="238" height="212"/>
+        <image name="satay" width="282" height="179"/>
+        <image name="teh_tarik" width="185" height="185"/>
+    </resources>
+</document>

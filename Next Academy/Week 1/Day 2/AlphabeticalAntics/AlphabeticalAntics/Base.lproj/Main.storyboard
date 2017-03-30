@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dMa-hZ-EVg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Palindrome-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PalindromeViewController" customModule="AlphabeticalAntics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it a palindrome?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP0-zq-bfj">
+                                <rect key="frame" x="16" y="258" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-DB-mpW">
+                                <rect key="frame" x="62.5" y="318.5" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="BDr-cm-L4a"/>
+                                    <constraint firstAttribute="height" constant="30" id="qeb-Ae-ZM5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KF-Qy-6Cl">
+                                <rect key="frame" x="163" y="398.5" width="49" height="30"/>
+                                <state key="normal" title="Check!"/>
+                                <connections>
+                                    <action selector="checkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYZ-V5-7vY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zP0-zq-bfj" secondAttribute="trailing" id="3fA-TV-4Zo"/>
+                            <constraint firstItem="uhD-DB-mpW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="46d-JQ-oSi"/>
+                            <constraint firstItem="zP0-zq-bfj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="71F-Vz-cWq"/>
+                            <constraint firstItem="4KF-Qy-6Cl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pu4-ha-Gx4"/>
+                            <constraint firstItem="uhD-DB-mpW" firstAttribute="top" secondItem="zP0-zq-bfj" secondAttribute="bottom" constant="40" id="lXv-bZ-xjg"/>
+                            <constraint firstItem="4KF-Qy-6Cl" firstAttribute="top" secondItem="uhD-DB-mpW" secondAttribute="bottom" constant="50" id="n59-xG-xWI"/>
+                            <constraint firstItem="uhD-DB-mpW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sBc-mf-ygm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Palindrome" id="IV3-KK-qXW"/>
+                    <connections>
+                        <outlet property="displayLabel" destination="zP0-zq-bfj" id="m51-uY-V7y"/>
+                        <outlet property="inputTextField" destination="uhD-DB-mpW" id="7TE-KI-6Xr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="-165"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="92c-09-B3p">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dMa-hZ-EVg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DM6-EE-NlA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZYK-M3-M2E"/>
+                        <segue destination="L4Z-XJ-CT4" kind="relationship" relationship="viewControllers" id="Ogy-Qj-p24"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwl-UW-HIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18" y="133"/>
+        </scene>
+        <!--Isogram-->
+        <scene sceneID="Ekn-n0-OrJ">
+            <objects>
+                <viewController id="L4Z-XJ-CT4" customClass="IsogramViewController" customModule="AlphabeticalAntics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nbh-ZA-W53"/>
+                        <viewControllerLayoutGuide type="bottom" id="qUu-4Z-Uph"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OYP-xp-ylH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it an isogram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3Z-kT-8Bm">
+                                <rect key="frame" x="16" y="258" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KN2-Ou-QuD">
+                                <rect key="frame" x="63" y="319" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AlU-Ph-emF"/>
+                                    <constraint firstAttribute="width" constant="250" id="sRs-8a-D5l"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdi-sd-oXo">
+                                <rect key="frame" x="163" y="399" width="49" height="30"/>
+                                <state key="normal" title="Check!"/>
+                                <connections>
+                                    <action selector="checkButtonPressed:" destination="L4Z-XJ-CT4" eventType="touchUpInside" id="NSp-mJ-rLX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KN2-Ou-QuD" firstAttribute="centerY" secondItem="OYP-xp-ylH" secondAttribute="centerY" id="9a3-OW-hae"/>
+                            <constraint firstItem="KN2-Ou-QuD" firstAttribute="centerX" secondItem="OYP-xp-ylH" secondAttribute="centerX" id="E9w-vF-w3t"/>
+                            <constraint firstItem="KN2-Ou-QuD" firstAttribute="top" secondItem="V3Z-kT-8Bm" secondAttribute="bottom" constant="40" id="a09-lV-hdz"/>
+                            <constraint firstItem="fdi-sd-oXo" firstAttribute="centerX" secondItem="OYP-xp-ylH" secondAttribute="centerX" id="i1D-7w-cSK"/>
+                            <constraint firstItem="fdi-sd-oXo" firstAttribute="top" secondItem="KN2-Ou-QuD" secondAttribute="bottom" constant="50" id="tLS-Uh-Wc1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V3Z-kT-8Bm" secondAttribute="trailing" id="uW9-n6-k1i"/>
+                            <constraint firstItem="V3Z-kT-8Bm" firstAttribute="leading" secondItem="OYP-xp-ylH" secondAttribute="leadingMargin" id="yQd-Vo-Zqi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Isogram" id="kqh-78-TCw"/>
+                    <connections>
+                        <outlet property="displayLabel" destination="V3Z-kT-8Bm" id="gYi-yf-TM7"/>
+                        <outlet property="inputTextField" destination="KN2-Ou-QuD" id="lAU-by-F74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBx-It-2px" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="530"/>
+        </scene>
+    </scenes>
+</document>
